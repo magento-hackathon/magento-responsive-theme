@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
+<head>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<?php echo $this->getChildHtml('after_body_start') ?>
+
+<?php echo $this->getChildHtml('header') ?>
+
+<div class="wrapper container">
+
+    <div class="jumbotron subhead">
+        <?php echo $this->getChildHtml('global_notices') ?>
+    </div>
+    <section class="page-header">
+        <div class="main-container col2-right-layout">
+            <div class="main row">
+                <?php echo $this->getChildHtml('breadcrumbs') ?>
+                <div class="col-main span12">
+                    <?php echo $this->getChildHtml('global_messages') ?>
+                    <?php echo $this->getChildHtml('content') ?>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php echo $this->getChildHtml('footer') ?>
+    <?php echo $this->getChildHtml('before_body_end') ?>
+</div>
+<?php echo $this->getAbsoluteFooter() ?>
+</body>
+</html>
