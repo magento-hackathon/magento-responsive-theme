@@ -41,4 +41,14 @@ document.observe('dom:loaded', function() {
             });
         });
     });
+
+    //categories modal box
+    if($('categories-show-modal') && $('category-nav')) {
+        var categoryNavigation = $('category-nav');
+        $('categories-show-modal').observe('click', function(ev) {
+            categoryNavigation
+                .addClassName('modal')
+                .addClassName('active');
+        });
+    }
 });
